@@ -1,6 +1,33 @@
 @use "../config/functions" as *;
 @use "../config/mixins" as *;
 
+.footer {
+
+    &__container {
+    }
+
+    &__top {
+    }
+
+    &__bottom {
+        padding-top: rem(25);
+        padding-bottom: rem(90);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(20);
+    }
+
+    &__tel {
+        font-weight: 500;
+        font-size: rem(24);
+    }
+    &__social {
+
+    }
+}
+
+
 
 
 

@@ -25,7 +25,7 @@
 		align-items: center;
 		flex-wrap: wrap;
 		row-gap: rem(10);
-        @include adaptive-clamp("column-gap", 30, 15);
+        @include adaptive-clamp("column-gap", 22, 15);
 		@media (max-width:em(767.98)){
 			flex-direction: column;
 			gap: rem(20);
