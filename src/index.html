@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee</title>
+  <link rel="stylesheet" href="styles/main.scss">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <script defer type="module" src="js/app.js"></script>
+  <!-- https://www.figma.com/design/5DkLcVB5TkEzgBucSskWKs/StarBucks-%2B?node-id=0-1&p=f -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="#" data-goto=".hero" class="header__logo logo gradient-text">StarBucks</a>
+        <div class="header__menu menu">
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="#" data-goto=".hero" class="menu__link hover-link">Home</a></li>
+              <li class="menu__item"><a href="#" data-goto="." class="menu__link hover-link">Select</a></li>
+              <li class="menu__item"><a href="#" data-goto="." class="menu__link hover-link">Shop</a></li>
+              <li class="menu__item"><a href="#" data-goto=".footer" class="menu__link hover-link">Contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+        <button type="button" class="menu__icon icon-menu"><span></span></button>
+      </div>
+    </header>
+    <main class="page">
+      <section class="page__hero hero">
+        <div class="hero__container">
+          <div class="hero__top">
+            <div class="hero__content">
+              <div class="hero__header-block header-block">
+                <h1 class="header-block__title-big">New Cafe by <span class="gradient-text">StarBucks</span></h1>
+                <div class="header-block__text">
+                  <p>Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount!</p>
+                </div>
+              </div>
+              <div class="hero__actions">
+                <a href="#" class="hero__button button button--max">Select a coffee</a>
+                <a href="#" class="hero__button button button--min button--transparent">More</a>
+              </div>
+              <div class="hero__counts counts-hero">
+                <div class="counts-hero__item">
+                  <div class="counts-hero__title">9k<span class="gradient-text">+</span></div>
+                  <div class="counts-hero__text">
+                    <p>Premium <br> Users</p>
+                  </div>
+                </div>
+                <div class="counts-hero__item">
+                  <div class="counts-hero__title">2k<span class="gradient-text">+</span></div>
+                  <div class="counts-hero__text">
+                    <p>Happy <br> Customer</p>
+                  </div>
+                </div>
+                <div class="counts-hero__item">
+                  <div class="counts-hero__title">28k<span class="gradient-text">+</span></div>
+                  <div class="counts-hero__text">
+                    <p>Awards <br> Winning</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero__image">
+              <img src="assets/img/hero/collee-label.png" alt="coffee">
+            </div>
+          </div>
+          <div class="hero__bottom"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer__container">
+      </div>
+    </footer>
+
+    <div class="scroll-up">
+      <svg class="scroll-up__svg" xmlns="" viewBox="-2 -2 52 52">
+        <path class="scroll-up__path" d="M 24,0 a24,24 0 0,1 0,48 a24,24 0 0,1 0,-48" />
+      </svg>
+    </div>
+
+  </div>
+</body>
+
+</html>

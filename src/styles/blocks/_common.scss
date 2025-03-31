@@ -1,0 +1,29 @@
+@use "../config/functions" as *;
+@use "../config/mixins" as *;
+@use '../config/root' as *;
+
+.logo {
+    font-weight: 800;
+    font-size: rem(37);
+    letter-spacing: -0.03em;
+    @media (max-width: em(767.98)){
+        font-size: rem(30); 
+    }
+}
+
+.header-block {
+
+    &__title-big {
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        color: var(--second-color);
+        &:not(:last-child) {
+            @include adaptive-clamp("margin-bottom", 54, 36);
+        }
+        @include adaptive-clamp("font-size", 80, 48);
+    }
+    &__text {
+    }
+}
+
