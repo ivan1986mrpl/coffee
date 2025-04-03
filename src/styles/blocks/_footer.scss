@@ -12,7 +12,9 @@
     &__bottom {
         padding-top: rem(25);
         padding-bottom: rem(90);
+        padding-right: rem(90);
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         gap: rem(20);
@@ -21,6 +23,9 @@
     &__tel {
         font-weight: 500;
         font-size: rem(24);
+        @media (max-width: em(500)){
+            font-size: rem(18);
+        }
     }
     &__social {
 
