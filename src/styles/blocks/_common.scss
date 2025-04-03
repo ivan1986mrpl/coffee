@@ -19,7 +19,7 @@
         letter-spacing: -0.03em;
         color: var(--second-color);
         &:not(:last-child) {
-            @include adaptive-clamp("margin-bottom", 54, 36);
+            @include adaptive-clamp("margin-bottom", 50, 36);
         }
         @include adaptive-clamp("font-size", 80, 48);
     }
