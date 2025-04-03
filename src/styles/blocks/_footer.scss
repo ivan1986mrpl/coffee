@@ -5,10 +5,22 @@
 
     &__container {
     }
-
     &__top {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(20);
+        border-top: rem(1) solid #{rgba(187, 179, 179, 0.43)};
+        @include adaptive-clamp("padding-top", 60, 20);
+        @media (max-width: em(600)){
+            flex-direction: column;              
+        }
     }
-
+    &__logo {
+    }
+    &__menu {
+    }
+    &__title {
+    }
     &__bottom {
         padding-top: rem(25);
         padding-bottom: rem(90);
@@ -17,9 +29,13 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        gap: rem(20);
+        gap: rem(70);
+        @media (max-width: em(600)){
+            flex-direction: column-reverse; 
+            padding-right: rem(0);
+            padding-bottom: rem(20);             
+        }
     }
-
     &__tel {
         font-weight: 500;
         font-size: rem(24);
@@ -28,11 +44,39 @@
         }
     }
     &__social {
-
     }
 }
 
-
+.menu-footer {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: rem(30);
+    row-gap: rem(15);
+    font-size: rem(20);
+    letter-spacing: -0.01em;
+    @media (max-width: em(600)){
+        flex-direction: column;
+          
+    }
+    &__column {
+    }
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+    &__list {
+    }
+    &__link {
+        color: rgba(187, 179, 179, 0.43);
+        transition: var(--transition);
+        @media (any-hover: hover){
+            &:hover{
+                color: var(--c-grey);
+            }
+        }
+    }
+}
 
 
 
