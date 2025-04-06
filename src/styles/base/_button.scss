@@ -12,23 +12,31 @@
 	transition: var(--transition);
 	background: var(--gradient-color);
 	color: var(--second-color);
+	font-size: rem(24);
+	@media (max-width: em(767.98)){
+		font-size: rem(16); 
+	}
 
 	&--max {
 		padding: rem(20) rem(78);
-		font-size: rem(24);
 		font-weight: 600;
 		@media (max-width: em(767.98)){
 			font-size: rem(16); 
 			padding: rem(16) rem(50);
 		}
 	}
-	&--arrow {
+	&--icon {
 		padding: rem(20) rem(43);
+		font-weight: 600;
 		@media (max-width: em(767.98)){
 			padding: rem(16) rem(34);
 		}
+		@media (max-width: em(410)){
+            width: 100;
+        }
 	}
 	&--min {
+		font-weight: 400;
 		padding: rem(20) rem(54);
 		@media (max-width: em(767.98)){
 			padding: rem(16) rem(44);

@@ -2,7 +2,7 @@
 @use "../config/mixins" as *;
 
 .contacts {
-    @include adaptive-clamp("padding-block", 80, 20);
+    @include adaptive-clamp("padding-bottom", 80, 20);
     &__container {
         display: flex;
         align-items: center;
@@ -50,11 +50,11 @@
         width: rem(57);
     }
 
-    /* &__link--phone {
+    &__link--phone {
         background: url('../assets/img/fifthSection5/phone.svg')  center center no-repeat;
         height: rem(57);
         width: rem(57);
-    } */ 
+    }
 
     &__image {
     }
