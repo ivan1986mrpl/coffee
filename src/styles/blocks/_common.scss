@@ -12,6 +12,25 @@
 }
 
 .header-block {
+    &--line {
+        display: flex;
+        @include adaptive-clamp("column-gap", 72, 30);
+        & .header-block__text {
+            max-width: rem(450);
+        }
+        & .header-block__title-big {
+            max-width: rem(400);
+        }
+        @media (max-width: em(800)){
+            display: block;
+            & .header-block__text {
+                max-width: 100%;
+            }
+            & .header-block__title-big {
+                max-width: 100%;
+            }
+        }
+    }
 
     &__title-big {
         font-weight: 800;

@@ -1,0 +1,80 @@
+@use "../config/functions" as *;
+@use "../config/mixins" as *;
+
+
+.products {
+
+    &__container {
+    }
+
+    &__header-block {
+        @include adaptive-clamp("margin-bottom", 63, 20);
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: rem(20);
+        @include adaptive-clamp("column-gap", 54, 20);
+        @media (max-width: em(800)){
+            justify-content: center;
+        }        
+    }
+    &__card {}
+}
+
+.card-product {
+    max-width: rem(277);
+    padding: rem(17) rem(32) rem(32) rem(32);
+    text-align: center;
+    border-radius: rem(25);
+    border: 1px solid var(--main-color);
+    @media (max-width: em(450)){
+        max-width: 100%;
+    }
+    &__image {
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: rem(32);
+        color: var(--second-color);
+        &:not(:last-child) {
+            margin-bottom: rem(18);
+        }
+    }
+
+    &__descr {
+        font-size: rem(20);
+        &:not(:last-child) {
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__data {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__price {
+        font-weight: 500;
+        font-size: rem(32);
+        color: var(--second-color);
+    }
+
+    &__size {
+        font-size: rem(20);
+    }
+
+    &__button {
+    }
+}
+
+
+
+
+
