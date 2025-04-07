@@ -44,28 +44,38 @@
     &__counts {
     }
     &__image {
+        position: relative;
+        &::after{
+            content:'';
+            position: absolute;
+            z-index: -1;
+            right: rem(130);
+            bottom: rem(60);
+    
+            width: rem(300);
+            height: rem(300);
+    
+            border-radius: 100%;
+            background: linear-gradient(245deg, rgba(35, 114, 73, 0.55) 0%, rgba(53, 198, 107, 0.73) 51.85%);
+            filter: blur(170px);
+        }
+        &::before{
+            content:'';
+            position: absolute;
+            z-index: -5;
+            right: rem(-230);
+            bottom: rem(-180);
+            width: rem(860);
+            height: rem(620);
+            background-image: url('../assets/img/hero/lines.svg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     }
     &__image {
-        position: relative;
+        max-width: rem(470);
     }
-    /* &__label {
-        position: absolute;
-        z-index: 1;
-        top: rem(0);
-        right: rem(10);
-        height: rem(221);
-        width: rem(221);
-        //background: url('../assets/img/hero/label.svg') center / cover no-repeat;
-        span {
-            line-height: 1.1;
-            letter-spacing: -0.03em;
-            color: var(--second-color);
-            @include adaptive-clamp("font-size", 62, 46);
-            position: absolute;
-            top: 30%;
-            left: 25%;
-        }
-    } */
     &__bottom {
     }
     &__items {

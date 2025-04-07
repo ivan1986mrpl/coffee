@@ -31,6 +31,7 @@
     border: 1px solid var(--main-color);
     @media (max-width: em(450)){
         max-width: 100%;
+        padding: rem(10) rem(20) rem(20) rem(20);
     }
     &__image {
     }
