@@ -1,13 +1,12 @@
-@use "../config/variables" as *;
+//@use "../config/variables" as *;
 @use "../config/functions" as *;
 @use "../config/mixins" as *;
 //@use '../config/root' as *;
 
 .work {
-
     &__container {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: space-between;
         gap: rem(20);
         @media (max-width: em(767.980)){
@@ -16,6 +15,21 @@
     }
     &__content {
         max-width: rem(460);
+        position: relative;
+        &::before{
+            content:'';
+            position: absolute;
+            z-index: -10;
+            right: rem(-145);
+            bottom: rem(-260);
+            transform: rotate(37deg);
+            width: rem(920);
+            height: rem(670);
+            background-image: url('../assets/img/hero/lines.svg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
         @media (max-width: em(767.98)){
             max-width: 100%;
             text-align: center;
@@ -24,6 +38,7 @@
     &__image {
     }
     &__img {
+        width: rem(465);
     }
     &__header-block {
         &:not(:last-child) {
@@ -37,6 +52,8 @@
         justify-content: center;
     }
     &__video--img {
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 17%);
+
     }
     &__button {
         position: relative;

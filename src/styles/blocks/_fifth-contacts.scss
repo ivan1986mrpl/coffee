@@ -12,7 +12,6 @@
             flex-direction: column; 
         }
     }
-
     &__content {
         max-width: rem(390);
         @media (max-width: em(660)){
@@ -20,17 +19,13 @@
             text-align: center;
         }
     }
-
     &__header-block {
         &:not(:last-child) {
             @include adaptive-clamp("margin-bottom", 50, 36);
         }
     }
-
     &__links {
-
     }
-
     &__link {
         display: flex;
         align-items: center;
@@ -43,23 +38,35 @@
             margin-bottom: rem(28);
         }
     }
-
     &__link--insta {
         background: url('../assets/img/fifthSection5/insta.svg')  center center no-repeat;
         height: rem(57);
         width: rem(57);
     }
-
     &__link--phone {
         background: url('../assets/img/fifthSection5/phone.svg')  center center no-repeat;
         height: rem(57);
         width: rem(57);
     }
-
     &__image {
+        position: relative;
+        &::after{
+            content:'';
+            position: absolute;
+            z-index: -10;
+            right: rem(-145);
+            bottom: rem(-260);
+            transform: rotate(25deg);
+            width: rem(920);
+            height: rem(670);
+            background-image: url('../assets/img/hero/lines.svg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     }
-
     &__img {
+        width: rem(355);
     }
 }
 

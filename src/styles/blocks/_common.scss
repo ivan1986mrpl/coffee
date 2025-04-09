@@ -69,3 +69,30 @@ p {
         filter: blur(40px);
     }
 }
+
+.decor-image {
+    position: relative;
+    &::before{
+        content:'';
+        position: absolute;
+        top: rem(26);
+        left: rem(-32);
+        height: 100%;
+        width: 100%;
+        background-color: #237249;
+        clip-path: polygon(67% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+    }
+    &__img {
+        clip-path: polygon(67% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+    }
+    &--mirror {
+        &::before{
+            clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%, 0 17%);
+            top: rem(26);
+            left: rem(18);
+        }
+        & .decor-image__img {
+            clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%, 0 17%);
+        }
+    }
+}
