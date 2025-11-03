@@ -2,74 +2,80 @@
 @use './../config/mixins' as *;
 @use './../config/root' as *;
 
- 
-
 .hover-link {
-    position: relative;
-    transition: color 0.4s ease 0s;
-    &::after{
-        content:'';
-        position: absolute;
-        bottom: rem(-3);
-        left: 0;
-        width: 0;
-        height: rem(2);
-        transition: width 0.3s ease 0s;
-        background-color: var(--hover-background);        
+  position: relative;
+  transition: color 0.4s ease 0s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: rem(-3);
+    left: 0;
+    width: 0;
+    height: rem(2);
+    background-color: var(--hover-background);
+    transition: width 0.3s ease 0s;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--hover-color);
     }
-    @media (any-hover: hover){
-        &:hover{
-            color: var(--hover-color);
-        }
-        &:hover::after {
-            width: 100%;
-        }
+
+    &:hover::after {
+      width: 100%;
     }
+  }
 }
 
-//===================
+// ===================
 .hover-link2 {
-    //font-size: 17px;
-    //background: transparent;
-    //border: none;
-    padding: rem(13) rem(18);
-    position: relative;
+  position: relative;
+
+  // font-size: 17px;
+  // background: transparent;
+  // border: none;
+  padding: rem(13) rem(18);
+  transition: 0.5s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
     transition: 0.5s ease;
-    &::before{
-        content:'';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 2px;
-        width: 0;
-        background-color: var(--accent-color);
-        transition: 0.5s ease;
-    }
-    &::after{
-        content:'';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 0;
-        width: 100%;
-        background-color: var(--accent-color);
-        transition: 0.4s ease;
-        z-index: -1;
-    }
-}  
-.hover-link2:hover {
-    color: var(--c-dark);
-    transition-delay: 0.5s;
-}  
-.hover-link2:hover::before {
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
     width: 100%;
-}  
-.hover-link2:hover::after {
-    height: 100%;
-    transition-delay: 0.4s;
-    color: var(--accent-color);
+    height: 0;
+    background-color: var(--accent-color);
+    transition: 0.4s ease;
+  }
 }
-  
+
+.hover-link2:hover {
+  color: var(--c-dark);
+  transition-delay: 0.5s;
+}
+
+.hover-link2:hover::before {
+  width: 100%;
+}
+
+.hover-link2:hover::after {
+  height: 100%;
+  color: var(--accent-color);
+  transition-delay: 0.4s;
+}
 
 /* 
 .hover-img {
@@ -85,7 +91,7 @@
     }
 } */
 
- /* 
+/* 
  .hover-scale-filter {
     img {
         width: 100%;
@@ -100,7 +106,7 @@
         }
     }
 }  */
- 
+
 /* 
 .hover-btn {
     transition: all 0.3s ease 0s;
@@ -109,11 +115,11 @@
             transform: scale(1.06);
         }
     }
-} */ 
+} */
 // всплывающие подсказки при наведении
 // если родитель не div, задать display: block;
 // <div class="hover-prompt"><span>описание проекта</span><img src="assets/img/demo.jpg" alt="alt"></div>
- 
+
 /* 
 .hover-prompt {
     width: 300px;//
@@ -143,9 +149,10 @@
             transform: scale(1) rotate(0);
         }
     }
-} */ 
+} */
 // ========================================
-// <div class="pulse"><img src="assets/img/instagram.svg" alt="button"></div> 
+// <div class="pulse"><img src="assets/img/instagram.svg" alt="button"></div>
+
 /* 
 $pulseColor: var(--hover-color); 
 .pulse {
@@ -196,6 +203,7 @@ $pulseColor: var(--hover-color);
     }
 }   */
 // ====================================
+
 /* 
 .border-decor {
     position: relative;

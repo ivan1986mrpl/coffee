@@ -1,26 +1,18 @@
- @use 'config/fonts';
+@use 'config/fonts';
+
 // @use 'config/icons';
- @use 'config/variables';
- @use 'config/root';
- @use 'config/reset';
- @use 'config/setting';
+@use 'config/variables';
+@use 'config/root';
+@use 'config/reset';
+@use 'config/setting';
+@use 'base/base';
+@use 'blocks/page';
+@use 'blocks/common';
+@use 'blocks/header';
+@use 'blocks/footer';
+@use 'blocks/hero';
+@use 'blocks/second';
+@use 'blocks/third-products';
 
- @use 'base/base';
-
- @use 'blocks/page';
- @use 'blocks/common';
- @use 'blocks/header';
- @use 'blocks/footer';
- @use 'blocks/hero';
- @use 'blocks/second';
- @use 'blocks/third-products';
-//@use 'blocks/fourth-skills';
+// @use 'blocks/fourth-skills';
 @use 'blocks/fifth-contacts';
-
-
-
- 
-
-
-
-

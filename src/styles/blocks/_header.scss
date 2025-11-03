@@ -1,34 +1,38 @@
- @use './../base/header-fon';
- @use './../base/burger';
- @use './../base/menu-header';
-
-@use "../config/functions" as *;
-@use "../config/mixins" as *;
+@use './../base/header-fon';
+@use './../base/burger';
+@use './../base/menu-header';
+@use '../config/functions' as *;
+@use '../config/mixins' as *;
 
 .header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 50;
-	&__container {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-        @include adaptive-clamp("column-gap", 40, 20);
-        @include adaptive-clamp("min-height", 120, 50);
-	}
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include adaptive-clamp('column-gap', 40, 20);
+    @include adaptive-clamp('min-height', 120, 50);
+  }
 }
+
 .menu {
-	&__list {
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		row-gap: rem(10);
-        @include adaptive-clamp("column-gap", 22, 15);
-		@media (max-width:em(767.98)){
-			flex-direction: column;
-			gap: rem(20);
-	  }
-	}
-} 
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: rem(10);
+
+    @include adaptive-clamp('column-gap', 22, 15);
+
+    @media (max-width: em(767.98)) {
+      flex-direction: column;
+      gap: rem(20);
+    }
+  }
+}

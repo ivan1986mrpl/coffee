@@ -1,64 +1,66 @@
-//@use "../config/variables" as *;
-@use "../config/functions" as *;
-@use "../config/mixins" as *;
-//@use '../config/root' as *;
+@use '../config/functions' as *;
+@use '../config/mixins' as *;
 
 .work {
-    &__container {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        gap: rem(20);
-        @media (max-width: em(767.980)){
-            flex-direction: column-reverse; 
-        }
-    }
-    &__content {
-        max-width: rem(460);
-        position: relative;
-        &::before{
-            content:'';
-            position: absolute;
-            z-index: -10;
-            right: rem(-145);
-            bottom: rem(-260);
-            transform: rotate(37deg);
-            width: rem(920);
-            height: rem(670);
-            background-image: url('../assets/img/hero/lines.svg');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        @media (max-width: em(767.98)){
-            max-width: 100%;
-            text-align: center;
-        }
-    }
-    &__image {
-    }
-    &__img {
-        width: rem(465);
-    }
-    &__header-block {
-        &:not(:last-child) {
-            @include adaptive-clamp("margin-bottom", 63, 36);
-        }
-    }
-    &__video {
-        aspect-ratio: 447 / 275;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    &__video--img {
-        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 17%);
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: rem(20);
 
+    @media (max-width: em(767.98)) {
+      flex-direction: column-reverse;
     }
-    &__button {
-        position: relative;
-        z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    max-width: rem(460);
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -10;
+      right: rem(-145);
+      bottom: rem(-260);
+      width: rem(920);
+      height: rem(670);
+      background-image: url('../assets/img/hero/lines.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(37deg);
     }
+
+    @media (max-width: em(767.98)) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    width: rem(465);
+  }
+
+  &__header-block {
+    &:not(:last-child) {
+      @include adaptive-clamp('margin-bottom', 63, 36);
+    }
+  }
+
+  &__video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 447 / 275;
+  }
+
+  &__video--img {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 17%);
+  }
+
+  &__button {
+    position: relative;
+    z-index: 1;
+  }
 }
-
-
