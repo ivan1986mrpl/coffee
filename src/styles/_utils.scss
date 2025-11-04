@@ -6,30 +6,30 @@
   padding-inline: var(--container-padding-x);
 }
 
-.visually-hidden {
-  position: absolute !important;
-  overflow: hidden !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-  clip: rect(0 0 0 0) !important;
-  clip-path: inset(100%) !important;
-}
+// .visually-hidden {
+//   position: absolute !important;
+//   overflow: hidden !important;
+//   width: 1px !important;
+//   height: 1px !important;
+//   margin: -1px !important;
+//   padding: 0 !important;
+//   white-space: nowrap !important;
+//   border: 0 !important;
+//   clip: rect(0 0 0 0) !important;
+//   clip-path: inset(100%) !important;
+// }
 
-.hidden-mobile {
-  @include mobile {
-    display: none !important;
-  }
-}
+// .hidden-mobile {
+//   @include mobile {
+//     display: none !important;
+//   }
+// }
 
-.visible-mobile {
-  @include mobile-above {
-    display: none !important;
-  }
-}
+// .visible-mobile {
+//   @include mobile-above {
+//     display: none !important;
+//   }
+// }
 
 .ibg {
   position: relative;
@@ -44,11 +44,11 @@
   }
 }
 
-.disabled {
-  opacity: 0.5;
-  cursor: default;
-  pointer-events: none; // запрещаем взаимодействие
-}
+// .disabled {
+//   opacity: 0.5;
+//   cursor: default;
+//   pointer-events: none; // запрещаем взаимодействие
+// }
 
 // p {
 //   &:not(:last-child) {

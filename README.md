@@ -4,7 +4,7 @@
 
 - Design: [link](https://www.figma.com/design/5DkLcVB5TkEzgBucSskWKs/StarBucks-%2B?node-id=0-1&p=f)
 
-- Deploy: [link]()
+- Deploy: [link](https://ivan1986mrpl.github.io/coffee/dist/)
 
 - Technologies: HTML, SCSS, Javascript, Vite, Eslint, Stylelint, Prettier
 

@@ -13,12 +13,11 @@
 // 	}
 // }
 
-// .gradient-text {
-//   --gradient-color: #999;
-// 	background: var(--gradient-color);//можно использовать фото
-// 	background-clip: text;//обрезка фона, чтобы он соответствовал тексту
-// 	color: transparent;//делаем текст прозрачным
-// }
+.gradient-text {
+	color: transparent;
+	background: var(--gradient-color);
+	background-clip: text;// можно использовать фото// обрезка фона, чтобы он соответствовал тексту// делаем текст прозрачным
+}
 
 // .video {
 // 	position: relative;

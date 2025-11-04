@@ -1,1 +1,71 @@
 @use '../helpers' as *;
+
+.footer {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(20);
+    border-top: rem(1) solid #{rgba(187, 179, 179, 0.43)};
+
+    @include adaptive-clamp('padding-top', 60, 20);
+
+    @media (max-width: em(600)) {
+      flex-direction: column;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(70);
+    padding-top: rem(25);
+    padding-bottom: rem(90);
+    padding-right: rem(90);
+
+    @media (max-width: em(600)) {
+      flex-direction: column-reverse;
+      padding-bottom: rem(20);
+      padding-right: rem(0);
+    }
+  }
+
+  &__tel {
+    font-size: rem(24);
+    font-weight: 500;
+
+    @media (max-width: em(500)) {
+      font-size: rem(18);
+    }
+  }
+}
+
+.menu-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(15) rem(30);
+  font-size: rem(20);
+  letter-spacing: -0.01em;
+
+  @media (max-width: em(600)) {
+    flex-direction: column;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__link {
+    color: rgba(187, 179, 179, 0.43);
+    transition: var(--transition);
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--color-grey);
+      }
+    }
+  }
+}
