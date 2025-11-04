@@ -44,16 +44,17 @@
 
   &__image {
     position: relative;
+    width: 100%;
     max-width: rem(470);
 
     &::after {
       content: '';
       position: absolute;
-      z-index: -1;
-      right: rem(130);
-      bottom: rem(60);
-      width: rem(300);
-      height: rem(300);
+      z-index: -5;
+      right: 130px;
+      bottom: 60px;
+      width: 300px;
+      height: 300px;
       background: linear-gradient(
         245deg,
         rgba(35, 114, 73, 0.55) 0%,
@@ -66,16 +67,27 @@
     &::before {
       content: '';
       position: absolute;
-      z-index: -5;
-      right: rem(-230);
-      bottom: rem(-180);
-      width: rem(860);
-      height: rem(620);
-      background-image: url('../assets/img/hero/lines.svg');
+      z-index: -10;
+      right: -230px;
+      bottom: -180px;
+      width: 860px;
+      height: 620px;
+      background-image: url('./../assets/img/icons/lines.svg');
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
+
+      @media (max-width: em(740)) {
+        right: -100px;
+        bottom: -100px;
+        width: 420px;
+        height: 420px;
+      }
     }
+  }
+
+  &__img {
+    animation: move-cup 1.5s infinite alternate ease-in-out;
   }
 
   &__items {
@@ -123,7 +135,7 @@
     letter-spacing: -0.03em;
     color: var(--second-color);
 
-    @include adaptive-clamp('font-size', 62, 46);
+    @include adaptive-clamp('font-size', 62, 38);
   }
 }
 
@@ -167,40 +179,12 @@
   }
 }
 
-// .hero {
-//   position: relative;
-//   display: flex;
-//   min-height: 100vh;
-//   padding-top: 0;
+@keyframes move-cup {
+  0% {
+    transform: none;
+  }
 
-//   &__container {
-//     flex: 1 1 auto;
-//     position: relative;
-//     z-index: 2;
-
-//     @include adaptive-clamp('padding-top', 200, 90);
-//     @include adaptive-clamp('padding-bottom', 200, 40);
-//   }
-
-//   // &__image {
-//   //   position: absolute;
-//   //   width: 100%;
-//   //   height: 100%;
-//   //   top: 0;
-//   //   left: 0;
-//   //   background-color: #000;
-//   //   img {
-//   //     position: absolute;
-//   //     width: 100%;
-//   //     height: 100%;
-//   //     top: 0;
-//   //     left: 0;
-//   //     object-fit: cover;
-//   //     object-position: 10% 70%;
-//   //     @media (max-width: 43.75em) {
-//   //       opacity: 0.9;
-//   //       object-position: 35%;
-//   //     }
-//   //   }
-//   // }
-// }
+  100% {
+    transform: translateY(-26px);
+  }
+}

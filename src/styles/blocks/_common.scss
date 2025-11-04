@@ -53,7 +53,7 @@ p {
       @include adaptive-clamp('margin-bottom', 50, 36);
     }
 
-    @include adaptive-clamp('font-size', 80, 48);
+    @include adaptive-clamp('font-size', 80, 44);
   }
 }
 

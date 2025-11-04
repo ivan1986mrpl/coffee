@@ -112,7 +112,8 @@
                 <div class="hero__counts counts-hero">
                   <div class="counts-hero__item">
                     <div class="counts-hero__title">
-                      9k<span class="gradient-text">+</span>
+                      <span data-animation-counter>9k</span>
+                      <span class="gradient-text">+</span>
                     </div>
                     <div class="counts-hero__text">
                       <p>
@@ -123,7 +124,8 @@
                   </div>
                   <div class="counts-hero__item">
                     <div class="counts-hero__title">
-                      2k<span class="gradient-text">+</span>
+                      <span data-animation-counter>7k</span>
+                      <span class="gradient-text">+</span>
                     </div>
                     <div class="counts-hero__text">
                       <p>
@@ -134,7 +136,8 @@
                   </div>
                   <div class="counts-hero__item">
                     <div class="counts-hero__title">
-                      28k<span class="gradient-text">+</span>
+                      <span data-animation-counter>28k</span>
+                      <span class="gradient-text">+</span>
                     </div>
                     <div class="counts-hero__text">
                       <p>
@@ -153,10 +156,6 @@
                   width="469"
                   height="629"
                 />
-                <!-- <div class="hero__label label"> 
-                <img src="assets/img/hero/label.svg" alt="label">
-                <span>45%</span>
-              </div> -->
               </div>
             </div>
             <div class="hero__bottom">
@@ -164,9 +163,12 @@
                 <div class="hero__item item-hero">
                   <div class="item-hero__icon">
                     <img
-                      src="./assets/img/hero/11.svg"
+                      src="./assets/img/hero/heart.png"
                       class="item-hero__img"
                       alt="icon"
+                      width="148"
+                      height="148"
+                      loading="lazy"
                     />
                   </div>
                   <h3 class="item-hero__title">Tasty</h3>
@@ -177,9 +179,12 @@
                 <div class="hero__item item-hero">
                   <div class="item-hero__icon">
                     <img
-                      src="./assets/img/hero/22.svg"
+                      src="./assets/img/hero/rocket.png"
                       class="item-hero__img"
                       alt="icon"
+                      width="208"
+                      height="200"
+                      loading="lazy"
                     />
                   </div>
                   <h3 class="item-hero__title">Fast</h3>
@@ -190,9 +195,12 @@
                 <div class="hero__item item-hero">
                   <div class="item-hero__icon">
                     <img
-                      src="./assets/img/hero/33.svg"
+                      src="./assets/img/hero/money.png"
                       class="item-hero__img"
                       alt="icon"
+                      width="211"
+                      height="154"
+                      loading="lazy"
                     />
                   </div>
                   <h3 class="item-hero__title">Available</h3>
@@ -239,9 +247,9 @@
                   height="275"
                   loading="lazy"
                 />
-                <a href="#" class="work__button button button--icon"
-                  >Cooking progress</a
-                >
+                <button type="button" class="work__button button button--icon">
+                  Cooking progress
+                </button>
               </div>
             </div>
           </div>
@@ -264,76 +272,128 @@
                 </p>
               </div>
             </div>
-            <div class="products__cards">
-              <div class="products__card card-product">
-                <div class="card-product__image">
-                  <img
-                    src="./assets/img/thirdSection3/1.png"
-                    alt="cup of coffee"
-                    width="180"
-                    height="241"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card-product__title">Cappuccino</h3>
-                <div class="card-product__descr">
-                  <p>Our cafe will serve you quickly</p>
-                </div>
-                <div class="card-product__data">
-                  <div class="card-product__price">7,45$</div>
-                  <div class="card-product__size">330 ml</div>
-                </div>
-                <div class="card-product__button button button--card">
-                  Buy Product
-                </div>
-              </div>
-
-              <div class="products__card card-product">
-                <div class="card-product__image">
-                  <img
-                    src="./assets/img/thirdSection3/2.png"
-                    alt="cup of coffee"
-                    width="180"
-                    height="241"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card-product__title">Cappuccino</h3>
-                <div class="card-product__descr">
-                  <p>Our cafe will serve you quickly</p>
-                </div>
-                <div class="card-product__data">
-                  <div class="card-product__price">7,45$</div>
-                  <div class="card-product__size">330 ml</div>
-                </div>
-                <div class="card-product__button button button--card">
-                  Buy Product
-                </div>
-              </div>
-
-              <div class="products__card card-product">
-                <div class="card-product__image">
-                  <img
-                    src="./assets/img/thirdSection3/3.png"
-                    alt="cup of coffee"
-                    width="180"
-                    height="241"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 class="card-product__title">Cappuccino</h3>
-                <div class="card-product__descr">
-                  <p>Our cafe will serve you quickly</p>
-                </div>
-                <div class="card-product__data">
-                  <div class="card-product__price">7,45$</div>
-                  <div class="card-product__size">330 ml</div>
-                </div>
-                <div class="card-product__button button button--card">
-                  Buy Product
-                </div>
-              </div>
-            </div>
+            <ul class="products__cards">
+              <li class="products__item">
+                <article class="products__card card">
+                  <div class="card__image">
+                    <img
+                      src="./assets/img/thirdSection3/1.png"
+                      alt="cup of coffee"
+                      class="card__img"
+                      width="180"
+                      height="241"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="card__header">
+                    <h3 class="card__title">Cappuccino</h3>
+                    <div class="card__descr">
+                      <p>Our cafe will serve you quickly</p>
+                    </div>
+                  </div>
+                  <div class="card__data">
+                    <div class="card__price" data-animation-counter>2,45$</div>
+                    <div class="card__size">330 ml</div>
+                  </div>
+                  <button
+                    type="button"
+                    class="button button--card card__button"
+                  >
+                    Buy Product
+                  </button>
+                </article>
+              </li>
+              <li class="products__item">
+                <article class="products__card card">
+                  <div class="card__image">
+                    <img
+                      src="./assets/img/thirdSection3/2.png"
+                      alt="cup of coffee"
+                      class="card__img"
+                      width="180"
+                      height="241"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="card__header">
+                    <h3 class="card__title">Mochaccino</h3>
+                    <div class="card__descr">
+                      <p>Our cafe will serve you quickly</p>
+                    </div>
+                  </div>
+                  <div class="card__data">
+                    <div class="card__price" data-animation-counter>2,20$</div>
+                    <div class="card__size">330 ml</div>
+                  </div>
+                  <button
+                    type="button"
+                    class="button button--card card__button"
+                  >
+                    Buy Product
+                  </button>
+                </article>
+              </li>
+              <li class="products__item">
+                <article class="products__card card">
+                  <div class="card__image">
+                    <img
+                      src="./assets/img/thirdSection3/3.png"
+                      alt="cup of coffee"
+                      class="card__img"
+                      width="180"
+                      height="241"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="card__header">
+                    <h3 class="card__title">Americano</h3>
+                    <div class="card__descr">
+                      <p>Our cafe will serve you quickly</p>
+                    </div>
+                  </div>
+                  <div class="card__data">
+                    <div class="card__price" data-animation-counter>3,05$</div>
+                    <div class="card__size">330 ml</div>
+                  </div>
+                  <button
+                    type="button"
+                    class="button button--card card__button"
+                  >
+                    Buy Product
+                  </button>
+                </article>
+              </li>
+              <li class="products__item">
+                <article class="products__card card">
+                  <div class="card__image">
+                    <img
+                      src="./assets/img/thirdSection3/1.png"
+                      alt="cup of coffee"
+                      class="card__img"
+                      width="180"
+                      height="241"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="card__header">
+                    <h3 class="card__title">Latte</h3>
+                    <div class="card__descr">
+                      <p>Our cafe will serve you quickly</p>
+                    </div>
+                  </div>
+                  <div class="card__data">
+                    <div class="card__price" data-animation-counter>2,85$</div>
+                    <div class="card__size">330 ml</div>
+                  </div>
+                  <button
+                    type="button"
+                    class="button button--card card__button"
+                  >
+                    Buy Product
+                  </button>
+                </article>
+              </li>
+            </ul>
           </div>
         </section>
 
