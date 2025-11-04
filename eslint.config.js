@@ -16,6 +16,7 @@ const ignores = [
   '**/.DS_Store',
   'postcss.config.js',
   'vite.config.js',
+  'build-dn/**',
 ];
 
 export default defineConfig([
