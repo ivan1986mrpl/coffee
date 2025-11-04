@@ -1,1 +1,65 @@
 @use '../helpers' as *;
+
+.work {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: rem(20);
+
+    @media (max-width: em(767.98)) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__content {
+    position: relative;
+    max-width: rem(460);
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -10;
+      right: rem(-145);
+      bottom: rem(-260);
+      width: rem(920);
+      height: rem(670);
+      background-image: url('../assets/img/hero/lines.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(37deg);
+    }
+
+    @media (max-width: em(767.98)) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    width: rem(465);
+  }
+
+  &__header-block {
+    &:not(:last-child) {
+      @include adaptive-clamp('margin-bottom', 63, 36);
+    }
+  }
+
+  &__video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 447 / 275;
+  }
+
+  &__video--img {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 17%);
+  }
+
+  &__button {
+    position: relative;
+    z-index: 1;
+  }
+}

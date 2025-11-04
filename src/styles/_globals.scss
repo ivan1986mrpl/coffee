@@ -1,6 +1,7 @@
 @use 'helpers' as *;
 
 body {
+  min-width: 320px;
   font-family: var(--font-family-base), sans-serif;
   font-size: var(--font-size);
   font-weight: var(--font-weight);
@@ -30,7 +31,6 @@ body {
   }
 }
 
-
 a,
 button,
 label,
@@ -47,11 +47,6 @@ svg * {
 //   outline-offset: rem(4);
 //   transition-duration: 0s !important;
 // }
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
 // a,
 // button {

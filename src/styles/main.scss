@@ -1,8 +1,6 @@
 @use 'reset';
 @use 'normalize';
 @use 'fonts/fonts';
-
-// @use 'fonts/icons';
 @use 'variables';
 @use 'utils';
 @use 'globals';
@@ -10,6 +8,7 @@
 @use '../components/form/button';
 @use '../components/hover/hover-link';
 @use '../components/spollers/spollers';
+@use '../components/scrollUpButton/scroll-up-button';
 @use '../components/tooltip/tooltip-social';
 @use 'blocks/page';
 @use 'blocks/common';
@@ -17,10 +16,9 @@
 @use 'blocks/footer';
 @use 'blocks/hero';
 @use 'blocks/second';
-
-// @use 'blocks/third';
-// @use 'blocks/fourth';
-// @use 'blocks/fifth';
+@use 'blocks/third';
+@use 'blocks/fourth';
+@use 'blocks/fifth';
 
 // .header,
 // main > *:not(:last-child), //  все секции, кроме последней
