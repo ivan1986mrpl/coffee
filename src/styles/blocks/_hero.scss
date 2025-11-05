@@ -178,13 +178,3 @@
     @include adaptive-clamp('font-size', 20, 16);
   }
 }
-
-@keyframes move-cup {
-  0% {
-    transform: none;
-  }
-
-  100% {
-    transform: translateY(-26px);
-  }
-}

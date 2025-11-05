@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     gap: rem(20);
-    border-top: rem(1) solid #{rgba(187, 179, 179, 0.43)};
+    border-top: var(--border);
 
     @include adaptive-clamp('padding-top', 60, 20);
 

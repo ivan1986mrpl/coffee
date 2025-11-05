@@ -1,0 +1,11 @@
+@use '../../styles/helpers/' as *;
+
+@keyframes move-cup {
+  0% {
+    transform: none;
+  }
+
+  100% {
+    transform: translateY(-1.5rem);
+  }
+}

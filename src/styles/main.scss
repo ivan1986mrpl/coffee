@@ -5,6 +5,7 @@
 @use 'utils';
 @use 'globals';
 @use 'helpers-classes';
+@use '../components/keyframes/keyframes';
 @use '../components/form/button';
 @use '../components/hover/hover-link';
 @use '../components/spollers/spollers';
@@ -22,7 +23,7 @@
 @use 'blocks/fifth';
 
 // .header,
-// main > *:not(:last-child), //  все секции, кроме последней
+// main > *:not(:last-child),
 // .footer {
 //   display: none !important;
 // }
