@@ -10,10 +10,15 @@ export default function pageNavigation() {
           document.querySelector(menuLink.dataset.goto)
         ) {
           e.preventDefault();
+          // fixed header
           const goToBlock = document.querySelector(menuLink.dataset.goto);
+          // not fixed header
+          // const goToBlockValue =
+          //   goToBlock.getBoundingClientRect().top + pageYOffset;
           const goToBlockValue =
-            goToBlock.getBoundingClientRect().top + pageYOffset;
-          // const goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+            goToBlock.getBoundingClientRect().top +
+            pageYOffset -
+            document.querySelector('header').offsetHeight;
 
           window.scrollTo({
             top: goToBlockValue,
@@ -24,17 +29,3 @@ export default function pageNavigation() {
     });
   }
 }
-
-/* 
-const anchors = document.querySelectorAll('a[href*="#"]');//в атрибуте ссылки href указать Id секции, к которой нужно перейти
-anchors.forEach(anchor => {
-	anchor.addEventListener('click', event => {
-		event.preventDefault();
-		const blockId = anchor.getAttribute('href').substring(1);
-		document.getElementById(blockId).scrollIntoView({
-			behavior: 'smooth',
-			block: 'start',
-		})
-	});
-});
-*/

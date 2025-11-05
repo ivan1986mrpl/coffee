@@ -54,7 +54,7 @@ p {
     color: var(--second-color);
 
     &:not(:last-child) {
-      @include adaptive-clamp('margin-bottom', 50, 36);
+      @include adaptive-clamp('margin-bottom', 50, 26);
     }
 
     @include adaptive-clamp('font-size', 80, 44);

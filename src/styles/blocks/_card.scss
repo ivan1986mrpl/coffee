@@ -2,7 +2,12 @@
 
 .card {
   position: relative;
-  width: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+
+  // width: 270px;
   padding: 30px;
   padding-top: 50px;
   text-align: center;
@@ -57,10 +62,11 @@
   &__img {
     position: absolute;
     top: -30px;
-    left: 0;
+    left: 50%;
     width: rem(180);
     filter: drop-shadow(0 4px 46px rgba(0, 0, 0, 0.48));
     transition: transform 0.5s;
+    translate: -50%;
   }
 
   &__title {
@@ -103,5 +109,6 @@
 
   &__button {
     width: 100%;
+    margin-top: auto;
   }
 }

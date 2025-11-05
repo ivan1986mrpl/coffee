@@ -25,37 +25,49 @@
 
   &__header-block {
     &:not(:last-child) {
-      @include adaptive-clamp('margin-bottom', 50, 36);
+      @include adaptive-clamp('margin-bottom', 60, 20);
     }
   }
 
-  &__link {
+  &__links {
     display: flex;
-    align-items: center;
-    padding-left: rem(70);
-    font-size: rem(28);
-    font-weight: 500;
-    line-height: 1.3;
-    color: var(--second-color);
-
-    &:not(:last-child) {
-      margin-bottom: rem(28);
-    }
+    flex-direction: column;
+    gap: rem(28);
   }
 
-  &__link--insta {
-    width: rem(57);
-    height: rem(57);
-    background: url('../assets/img/fifthSection5/insta.svg') center center
-      no-repeat;
-  }
+  // &__link {
+  //   display: inline-flex;
+  //   align-items: center;
+  //   gap: rem(15);
+  //   white-space: nowrap;
 
-  &__link--phone {
-    width: rem(57);
-    height: rem(57);
-    background: url('../assets/img/fifthSection5/phone.svg') center center
-      no-repeat;
-  }
+  //   span {
+  //     font-size: fluid(28, 18);
+  //     font-weight: 500;
+  //     color: var(--second-color);
+  //     white-space: nowrap;
+  //   }
+
+  //   &::before {
+  //     --size: #{fluid(57, 44)};
+  //     content: '';
+  //     display: inline-block;
+  //     width: var(--size);
+  //     height: var(--size);
+  //     background-position: center;
+  //     background-size: contain;
+  //     background-repeat: no-repeat;
+  //     flex-shrink: 0;
+
+  //   }
+  //   &--insta::before {
+  //     background-image: url('../assets/img/fifthSection5/insta.svg');
+  //   }
+
+  //   &--phone::before {
+  //     background-image: url('../assets/img/fifthSection5/phone.svg');
+  //   }
+  // }
 
   &__image {
     position: relative;
@@ -68,7 +80,7 @@
       bottom: rem(-260);
       width: rem(920);
       height: rem(670);
-      background-image: url('./../assets/img/icons/lines.svg');
+      background-image: url('../assets/img/icons/lines.svg');
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;

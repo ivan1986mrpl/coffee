@@ -31,13 +31,8 @@
     }
   }
 
-  &__tel {
-    font-size: rem(24);
-    font-weight: 500;
-
-    @media (max-width: em(500)) {
-      font-size: rem(18);
-    }
+  &__social {
+    display: none;
   }
 }
 

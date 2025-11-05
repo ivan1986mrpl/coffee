@@ -43,7 +43,7 @@
 
   &__header-block {
     &:not(:last-child) {
-      @include adaptive-clamp('margin-bottom', 63, 36);
+      @include adaptive-clamp('margin-bottom', 60, 20);
     }
   }
 
