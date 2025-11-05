@@ -1,5 +1,4 @@
-@use '../config/functions' as *;
-@use '../config/mixins' as *;
+@use '../helpers' as *;
 
 .hero {
   &__top {
@@ -45,16 +44,17 @@
 
   &__image {
     position: relative;
+    width: 100%;
     max-width: rem(470);
 
     &::after {
       content: '';
       position: absolute;
-      z-index: -1;
-      right: rem(130);
-      bottom: rem(60);
-      width: rem(300);
-      height: rem(300);
+      z-index: -5;
+      right: 130px;
+      bottom: 60px;
+      width: 300px;
+      height: 300px;
       background: linear-gradient(
         245deg,
         rgba(35, 114, 73, 0.55) 0%,
@@ -67,15 +67,22 @@
     &::before {
       content: '';
       position: absolute;
-      z-index: -5;
-      right: rem(-230);
-      bottom: rem(-180);
-      width: rem(860);
-      height: rem(620);
-      background-image: url('../assets/img/hero/lines.svg');
+      z-index: -10;
+      right: -230px;
+      bottom: -180px;
+      width: 860px;
+      height: 620px;
+      background-image: url('./../assets/img/icons/lines.svg');
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
+
+      @media (max-width: em(740)) {
+        right: -100px;
+        bottom: -100px;
+        width: 420px;
+        height: 420px;
+      }
     }
   }
 
@@ -124,7 +131,7 @@
     letter-spacing: -0.03em;
     color: var(--second-color);
 
-    @include adaptive-clamp('font-size', 62, 46);
+    @include adaptive-clamp('font-size', 62, 38);
   }
 }
 
@@ -134,7 +141,7 @@
   align-items: center;
   max-width: rem(200);
   text-align: center;
-  color: var(--c-dark);
+  color: var(--color-dark);
 
   @media (max-width: em(470)) {
     max-width: 100%;

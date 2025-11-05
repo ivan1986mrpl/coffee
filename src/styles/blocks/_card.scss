@@ -1,0 +1,114 @@
+@use '../helpers' as *;
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+
+  // width: 270px;
+  padding: 30px;
+  padding-top: 50px;
+  text-align: center;
+  background-color: var(--color-dark);
+  border-radius: 30px;
+
+  @include hover {
+    &::before {
+      background: rgb(35, 114, 73);
+      background: linear-gradient(
+        260deg,
+        rgba(35, 114, 73, 1) 0%,
+        rgba(53, 198, 107, 1) 100%
+      );
+    }
+
+    .card__img {
+      transform: translateY(-5px);
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -5;
+    inset: -2px;
+    background: rgb(218, 218, 218);
+    background: linear-gradient(
+      110deg,
+      rgba(218, 218, 218, 0.7) 0%,
+      rgba(218, 218, 218, 0.07) 42%,
+      rgba(218, 218, 218, 0.7) 100%
+    );
+    border-radius: 30px;
+  }
+
+  &__image {
+    position: relative;
+    margin-bottom: 30px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: rem(190);
+      height: rem(190);
+      background: var(--gradient-color);
+      border-radius: 100%;
+      box-shadow: 0 4px 41px 0 rgba(0, 0, 0, 0.39);
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: rem(180);
+    filter: drop-shadow(0 4px 46px rgba(0, 0, 0, 0.48));
+    transition: transform 0.5s;
+    translate: -50%;
+  }
+
+  &__title {
+    font-size: rem(32);
+    font-weight: 500;
+    color: var(--second-color);
+
+    &:not(:last-child) {
+      margin-bottom: rem(18);
+    }
+  }
+
+  &__descr {
+    font-size: rem(20);
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__price {
+    font-size: rem(32);
+    font-weight: 500;
+    color: var(--second-color);
+  }
+
+  &__size {
+    font-size: rem(20);
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: auto;
+  }
+}

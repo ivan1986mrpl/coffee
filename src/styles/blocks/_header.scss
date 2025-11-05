@@ -1,8 +1,8 @@
-@use './../base/header-fon';
-@use './../base/burger';
-@use './../base/menu-header';
-@use '../config/functions' as *;
-@use '../config/mixins' as *;
+@use '../helpers' as *;
+@use '../../components/header/header-fon';
+@use '../../components/header/header-shadow';
+@use '../../components/header/burger-2';
+@use '../../components/header/menu-header';
 
 .header {
   position: fixed;
@@ -17,22 +17,11 @@
     align-items: center;
 
     @include adaptive-clamp('column-gap', 40, 20);
-    @include adaptive-clamp('min-height', 120, 50);
+    @include adaptive-clamp('min-height', 120, 60);
   }
-}
 
-.menu {
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    row-gap: rem(10);
-
-    @include adaptive-clamp('column-gap', 22, 15);
-
-    @media (max-width: em(767.98)) {
-      flex-direction: column;
-      gap: rem(20);
-    }
+  &__logo {
+    position: relative;
+    z-index: 5;
   }
 }
