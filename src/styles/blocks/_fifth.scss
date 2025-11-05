@@ -1,0 +1,94 @@
+@use '../helpers' as *;
+
+.contacts {
+  @include adaptive-clamp('padding-bottom', 80, 20);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(20);
+
+    @media (max-width: em(660)) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    max-width: rem(390);
+
+    @media (max-width: em(660)) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__header-block {
+    &:not(:last-child) {
+      @include adaptive-clamp('margin-bottom', 60, 20);
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: rem(28);
+  }
+
+  // &__link {
+  //   display: inline-flex;
+  //   align-items: center;
+  //   gap: rem(15);
+  //   white-space: nowrap;
+
+  //   span {
+  //     font-size: fluid(28, 18);
+  //     font-weight: 500;
+  //     color: var(--second-color);
+  //     white-space: nowrap;
+  //   }
+
+  //   &::before {
+  //     --size: #{fluid(57, 44)};
+  //     content: '';
+  //     display: inline-block;
+  //     width: var(--size);
+  //     height: var(--size);
+  //     background-position: center;
+  //     background-size: contain;
+  //     background-repeat: no-repeat;
+  //     flex-shrink: 0;
+
+  //   }
+  //   &--insta::before {
+  //     background-image: url('../assets/img/fifthSection5/insta.svg');
+  //   }
+
+  //   &--phone::before {
+  //     background-image: url('../assets/img/fifthSection5/phone.svg');
+  //   }
+  // }
+
+  &__image {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -10;
+      right: rem(-145);
+      bottom: rem(-260);
+      width: rem(920);
+      height: rem(670);
+      background-image: url('../assets/img/icons/lines.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(25deg);
+    }
+  }
+
+  &__img {
+    width: rem(355);
+  }
+}

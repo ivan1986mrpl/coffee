@@ -1,6 +1,4 @@
-@use '../config/functions' as *;
-@use '../config/mixins' as *;
-@use '../config/root' as *;
+@use '../helpers' as *;
 
 .logo {
   font-size: rem(37);
@@ -45,6 +43,10 @@ p {
     }
   }
 
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+
   &__title-big {
     font-weight: 800;
     line-height: 1.1;
@@ -52,10 +54,10 @@ p {
     color: var(--second-color);
 
     &:not(:last-child) {
-      @include adaptive-clamp('margin-bottom', 50, 36);
+      @include adaptive-clamp('margin-bottom', 50, 26);
     }
 
-    @include adaptive-clamp('font-size', 80, 48);
+    @include adaptive-clamp('font-size', 80, 44);
   }
 }
 

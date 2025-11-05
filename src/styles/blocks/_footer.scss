@@ -1,12 +1,11 @@
-@use '../config/functions' as *;
-@use '../config/mixins' as *;
+@use '../helpers' as *;
 
 .footer {
   &__top {
     display: flex;
     justify-content: space-between;
     gap: rem(20);
-    border-top: rem(1) solid #{rgba(187, 179, 179, 0.43)};
+    border-top: var(--border);
 
     @include adaptive-clamp('padding-top', 60, 20);
 
@@ -32,13 +31,8 @@
     }
   }
 
-  &__tel {
-    font-size: rem(24);
-    font-weight: 500;
-
-    @media (max-width: em(500)) {
-      font-size: rem(18);
-    }
+  &__social {
+    display: none;
   }
 }
 
@@ -65,7 +59,7 @@
 
     @media (any-hover: hover) {
       &:hover {
-        color: var(--c-grey);
+        color: var(--color-grey);
       }
     }
   }

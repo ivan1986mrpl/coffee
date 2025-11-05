@@ -1,15 +1,17 @@
 'use strict';
 
-import scrollUp from './modules/scrollUp';
-import spollers from './modules/spollers';
-import headerFon from './modules/headerFon';
-import pageNavigation from './modules/page-navigation';
-import menuBurger from './modules/menu-burger';
+import pageNavigation from './modules/pageNavigation';
+import headerFon from '../components/header/headerFon';
+import Header from './../components/header/Header';
+import spollers from '../components/spollers/spollers';
+import ScrollUpButton from '../components/scrollUpButton/ScrollUpButton';
+import CounterAnimationCollection from './../components/CounterAnimation/CounterAnimation';
 
 window.addEventListener('DOMContentLoaded', () => {
-  scrollUp();
-  spollers();
-  headerFon();
   pageNavigation();
-  menuBurger();
+  headerFon();
+  new Header();
+  spollers();
+  new ScrollUpButton();
+  new CounterAnimationCollection();
 });

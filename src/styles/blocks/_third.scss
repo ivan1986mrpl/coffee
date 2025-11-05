@@ -1,0 +1,13 @@
+@use '../helpers' as *;
+
+.products {
+  &__header-block {
+    @include adaptive-clamp('margin-bottom', 60, 20);
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}

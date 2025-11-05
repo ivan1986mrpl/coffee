@@ -1,5 +1,4 @@
-@use '../config/functions' as *;
-@use '../config/mixins' as *;
+@use '../helpers' as *;
 
 .work {
   &__container {
@@ -25,7 +24,7 @@
       bottom: rem(-260);
       width: rem(920);
       height: rem(670);
-      background-image: url('../assets/img/hero/lines.svg');
+      background-image: url('./../assets/img/icons/lines.svg');
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -44,7 +43,7 @@
 
   &__header-block {
     &:not(:last-child) {
-      @include adaptive-clamp('margin-bottom', 63, 36);
+      @include adaptive-clamp('margin-bottom', 60, 20);
     }
   }
 
