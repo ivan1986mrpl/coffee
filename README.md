@@ -9,7 +9,7 @@
 - Technologies: HTML, SCSS, Javascript, Vite, Eslint, Stylelint, Prettier
 
 - Google Page Speed:
-  <img  alt="image" src="https://github.com/user-attachments/assets/bc40d01f-61df-4f34-a5a7-b8c5892afd40" />
+  <img  alt="image" src="https://github.com/user-attachments/assets/3db0b369-8578-47d4-9abf-72045fbac7ed" />
 
 - Screenshot:
   <img width="1900" height="6371" alt="Image" src="https://github.com/user-attachments/assets/18fddf7f-2803-48d9-8084-2bd198ce0fb4" />
