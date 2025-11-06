@@ -113,7 +113,7 @@
                   >
                   <a
                     href="#"
-                    data-goto=".events"
+                    data-popup-link="popup-video"
                     class="hero__button button button--min button--transparent"
                     >More</a
                   >
@@ -247,18 +247,43 @@
                   </p>
                 </div>
               </div>
-              <div class="work__video ibg">
-                <img
-                  src="assets/img/secondSection2/kitchen.webp"
-                  alt="video"
-                  class="work__video--img"
+              <div class="video-player work__video ibg" data-video-player>
+                <video
+                  class="video-player__video"
+                  src="./assets/video/coffee1.mp4"
                   width="447"
                   height="275"
-                  loading="lazy"
-                />
-                <button type="button" class="work__button button button--icon">
-                  Cooking progress
-                </button>
+                  poster="assets/img/secondSection2/kitchen.webp"
+                  data-video-player-video
+                ></video>
+                <div
+                  class="video-player__panel is-active"
+                  data-video-player-panel
+                >
+                  <button
+                    class="video-player__play-button pulse"
+                    type="button"
+                    aria-label="Play video"
+                    title="Play video"
+                    data-video-player-play-button
+                  >
+                    <svg
+                      width="58"
+                      height="58"
+                      viewBox="0 0 58 58"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.5625 29C0.5625 13.2944 13.2944 0.5625 29 0.5625C44.7056 0.5625 57.4375 13.2944 57.4375 29C57.4375 44.7056 44.7056 57.4375 29 57.4375C13.2944 57.4375 0.5625 44.7056 0.5625 29ZM41.4663 26.1318C43.7167 27.382 43.7167 30.6183 41.4663 31.8685L25.1248 40.9471C22.9377 42.1621 20.25 40.5807 20.25 38.0788V19.9215C20.25 17.4196 22.9377 15.8381 25.1248 17.0531L41.4663 26.1318Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                  <div class="video-player__duration">0.19 min</div>
+                </div>
               </div>
             </div>
           </div>
@@ -428,6 +453,7 @@
                 <button
                   type="button"
                   class="button button--card card-event__button"
+                  data-popup-link="popup-video"
                 >
                   More
                 </button>
@@ -437,6 +463,7 @@
                 <button
                   type="button"
                   class="button button--card card-event__button"
+                  data-popup-link="popup-video"
                 >
                   More
                 </button>
@@ -446,6 +473,7 @@
                 <button
                   type="button"
                   class="button button--card card-event__button"
+                  data-popup-link="popup-video"
                 >
                   More
                 </button>
@@ -455,6 +483,7 @@
                 <button
                   type="button"
                   class="button button--card card-event__button"
+                  data-popup-link="popup-video"
                 >
                   More
                 </button>
@@ -464,6 +493,7 @@
                 <button
                   type="button"
                   class="button button--card card-event__button"
+                  data-popup-link="popup-video"
                 >
                   More
                 </button>
@@ -583,6 +613,80 @@
           </div>
         </div>
       </footer>
+
+      <div data-popup="popup-video" class="popup video-popup">
+        <div class="popup__body">
+          <div data-popup-content class="popup__content">
+            <button
+              type="button"
+              class="popup__close"
+              data-popup-close
+              aria-label="Close popup"
+            >
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M30 10L10 30"
+                  stroke="#181C29"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 10L30 30"
+                  stroke="#181C29"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="video-player video-popup__player" data-video-player>
+              <video
+                class="video-player__video video-popup__video"
+                src="./assets/video/coffee1.mp4"
+                width="470"
+                height="390"
+                poster="./assets/img/events/5.webp"
+                data-video-player-video
+              ></video>
+              <div
+                class="video-player__panel is-active video-popup__panel"
+                data-video-player-panel
+              >
+                <button
+                  class="video-player__play-button pulse video-popup__play-button"
+                  type="button"
+                  aria-label="Play video"
+                  title="Play video"
+                  data-video-player-play-button
+                >
+                  <svg
+                    width="58"
+                    height="58"
+                    viewBox="0 0 58 58"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.5625 29C0.5625 13.2944 13.2944 0.5625 29 0.5625C44.7056 0.5625 57.4375 13.2944 57.4375 29C57.4375 44.7056 44.7056 57.4375 29 57.4375C13.2944 57.4375 0.5625 44.7056 0.5625 29ZM41.4663 26.1318C43.7167 27.382 43.7167 30.6183 41.4663 31.8685L25.1248 40.9471C22.9377 42.1621 20.25 40.5807 20.25 38.0788V19.9215C20.25 17.4196 22.9377 15.8381 25.1248 17.0531L41.4663 26.1318Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+                <div class="video-player__duration video-popup__duration">1.30 min</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
