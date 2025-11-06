@@ -22,9 +22,9 @@
       sizes="16x16"
       href="./assets/img/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />    
-    <link rel="stylesheet" href="./assets/css/app.css">
+    <link rel="manifest" href="./assets/img/favicon/site.webmanifest" />
     <script type="module" src="./assets/js/app.js"></script>
+    <link rel="stylesheet" href="./assets/css/app.css">
   </head>
 
   <body>
@@ -38,7 +38,12 @@
             <nav class="header__menu menu" data-header-menu>
               <ul class="menu__list">
                 <li class="menu__item">
-                  <a href="/" class="menu__link hover-link" data-goto=".hero"
+                  <a
+                    href="/"
+                    class="menu__link hover-link"
+                    data-goto=".hero"
+                    aria-label="home"
+                    title="home"
                     >Home</a
                   >
                 </li>
@@ -522,6 +527,8 @@
               href="#"
               data-goto=".hero"
               class="footer__logo logo gradient-text"
+              aria-label="home"
+              title="home"
               >StarBucks</a
             >
             <div data-spollers="600, max" class="footer__menu menu-footer">
