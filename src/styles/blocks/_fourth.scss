@@ -6,6 +6,7 @@
   }
 
   &__items {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
     grid-template-areas:
@@ -31,6 +32,34 @@
         'd'
         'e';
       grid-auto-rows: auto;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -10;
+      top: -410px;
+      left: -610px;
+      width: 860px;
+      height: 620px;
+      background-image: url('../assets/img/icons/lines.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(410deg);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -5;
+      right: 50%;
+      bottom: -50px;
+      width: 320px;
+      height: 270px;
+      background-color: rgba(217, 217, 217, 0.2);
+      border-radius: 100%;
+      filter: blur(50px);
     }
   }
 
