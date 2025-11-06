@@ -24,8 +24,27 @@
   }
 
   &__header-block {
+    position: relative;
+
     &:not(:last-child) {
       @include adaptive-clamp('margin-bottom', 60, 20);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -5;
+      top: 20px;
+      left: 80px;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(
+        245deg,
+        rgba(35, 114, 73, 0.55) 0%,
+        rgba(53, 198, 107, 0.73) 51.85%
+      );
+      border-radius: 100%;
+      filter: blur(50px);
     }
   }
 
@@ -35,47 +54,13 @@
     gap: rem(28);
   }
 
-  // &__link {
-  //   display: inline-flex;
-  //   align-items: center;
-  //   gap: rem(15);
-  //   white-space: nowrap;
-
-  //   span {
-  //     font-size: fluid(28, 18);
-  //     font-weight: 500;
-  //     color: var(--second-color);
-  //     white-space: nowrap;
-  //   }
-
-  //   &::before {
-  //     --size: #{fluid(57, 44)};
-  //     content: '';
-  //     display: inline-block;
-  //     width: var(--size);
-  //     height: var(--size);
-  //     background-position: center;
-  //     background-size: contain;
-  //     background-repeat: no-repeat;
-  //     flex-shrink: 0;
-
-  //   }
-  //   &--insta::before {
-  //     background-image: url('../assets/img/fifthSection5/insta.svg');
-  //   }
-
-  //   &--phone::before {
-  //     background-image: url('../assets/img/fifthSection5/phone.svg');
-  //   }
-  // }
-
   &__image {
     position: relative;
 
     &::after {
       content: '';
       position: absolute;
-      z-index: -10;
+      z-index: -15;
       right: rem(-145);
       bottom: rem(-260);
       width: rem(920);

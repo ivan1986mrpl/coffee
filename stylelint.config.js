@@ -14,7 +14,6 @@ export default {
     '**/.idea/**',
     '**/.vscode/**',
     '**/.DS_Store',
-    'build-dn/**',
   ],
   defaultSeverity: 'warning',
   extends: ['stylelint-config-standard-scss'],
