@@ -12,4 +12,4 @@
   <img  alt="image" src="https://github.com/user-attachments/assets/3db0b369-8578-47d4-9abf-72045fbac7ed" />
 
 - Screenshot:
-  <img width="1900" height="6371" alt="Image" src="https://github.com/user-attachments/assets/18fddf7f-2803-48d9-8084-2bd198ce0fb4" />
+  <img width="1900" height="6371" alt="Image" src="https://github.com/user-attachments/assets/18ce2407-d551-4701-9a9e-3214c05a4026" />

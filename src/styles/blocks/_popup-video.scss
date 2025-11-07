@@ -2,7 +2,8 @@
 
 .video-popup {
   .popup__content {
-    width: fluid(600, 270);
+    width: 100%;
+    max-width: 720px;
     height: auto;
     padding: 0;
   }
