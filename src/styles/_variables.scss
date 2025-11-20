@@ -1,11 +1,11 @@
 @use 'helpers' as *;
 
-// --f-font-size: #{rem(16)}; #{rgba(#000, 10%) (если используем функции в css переменных, надо обернуть в #{} , иначе функции не будут работать)
 :root {
   --font-family-base: 'Montserrat', sans-serif;
   --font-family: 'Montserrat', sans-serif;
   --second-family: 'Montserrat', sans-serif;
 
+  --scrollbar-width: 0rem;
   --container-width: #{rem(1260)};
   --container-padding-x: #{rem(15)};
   --transition-duration: 0.3s;
