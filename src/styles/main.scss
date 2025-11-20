@@ -9,8 +9,12 @@
 @use '../components/form/button';
 @use '../components/icon/link';
 @use '../components/hover/hover-link';
+@use '../components/hover/pulse';
 @use '../components/spollers/spollers';
 @use '../components/scrollUpButton/scroll-up-button';
+@use '../components/video/video-player/video-player';
+@use '../components/Popup/popup';
+@use 'blocks/popup-video';
 @use 'blocks/card';
 @use 'blocks/page';
 @use 'blocks/common';

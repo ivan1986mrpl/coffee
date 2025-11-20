@@ -17,7 +17,7 @@
     align-items: center;
 
     @include adaptive-clamp('column-gap', 40, 20);
-    @include adaptive-clamp('min-height', 120, 60);
+    @include adaptive-clamp('min-height', 120, 65);
   }
 
   &__logo {

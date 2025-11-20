@@ -1,0 +1,10 @@
+@use '../helpers/' as *;
+
+.video-popup {
+  .popup__content {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    padding: 0;
+  }
+}
